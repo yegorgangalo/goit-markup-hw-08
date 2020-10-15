@@ -2,10 +2,12 @@
 @import "./utils/placeholders";
 @import "./utils/mixins";
 
-@import "./components/global";
+@import "./base/global";
 @import "./components/button";
 @import "./components/logo";
-@import "./components/header";
+@import "./components/social-list";
+@import "./layout/header";
 
-@import "./components/portfolio-page";
-@import "./components/footer";
+@import "./pages/portfolio-page";
+
+@import "./layout/footer";

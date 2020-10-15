@@ -5,8 +5,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   background-color: getColor("primary-background");
-  //   color: $primary-text-color;
-  //   background-color: $primary-background-color;
 }
 
 a {
@@ -73,54 +71,4 @@ h6 {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-
-/* SOCIAL ICONS*/
-.social-list {
-  display: flex;
-  justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
-
-  .footer & {
-    justify-content: start;
-    margin-top: 20px;
-    padding-left: 0;
-  }
-}
-
-.social-item + .social-item {
-  margin-left: 10px;
-}
-
-.social-link {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: getColor("social-icon");
-  @include transitionTwoProp(fill, background-color);
-
-  &:hover,
-  &:focus {
-    background-color: getColor("accent");
-    fill: getColor("primary-white");
-  }
-}
-
-.footer .social-link {
-  background-color: getColor("social-link-background");
-  fill: getColor("primary-white");
-
-  &:hover,
-  &:focus {
-    background-color: getColor("accent");
-  }
-}
-
-.social-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  transform: translate(calc(50% + 2px), calc(50% + 2px));
 }
