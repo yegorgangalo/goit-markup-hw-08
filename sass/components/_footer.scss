@@ -1,0 +1,79 @@
+/* FOOTER  */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  color: getColor("primary-white");
+  background-color: getColor("secondary-background");
+
+  & .title {
+    display: inline-block;
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+}
+
+.footer-list,
+.half-list {
+  display: flex;
+}
+
+.footer-list .item,
+.half-list .item {
+  @include itemWidth(2);
+}
+
+.footer-list .item + .item,
+.half-list .item + .item {
+  margin-left: 30px;
+}
+
+.address {
+  margin-top: 20px;
+
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address .link {
+  display: block;
+  margin-top: 9px;
+  color: getColor("address-link-text");
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: getColor("accent");
+  }
+}
+
+.footer-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.footer-input {
+  margin-right: 12px;
+  width: 358px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border: 1px solid getColor("footer-input-border");
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;
+
+  &:focus {
+    outline-color: getColor("accent");
+  }
+
+  &:hover {
+    border: 1px solid getColor("accent");
+  }
+}

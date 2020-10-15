@@ -1,0 +1,208 @@
+/* модальне вікно */
+.backdrop {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: getColor("backdrop-background");
+
+  opacity: 1;
+  transform: scale(1);
+  @include transitionTwoProp(opacity, transform);
+
+  &.is-hidden {
+    pointer-events: none;
+
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+
+  border-radius: 4px;
+  background-color: getColor("primary-white");
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  & .section-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}
+
+.form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.form-text {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-input {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 12px;
+  border: 1px solid getColor("modal-input-border");
+  border-radius: 4px;
+  @include transition(border);
+
+  &:focus {
+    outline-color: getColor("accent");
+  }
+
+  &:hover {
+    border-color: getColor("accent");
+  }
+}
+
+.form-icon {
+  position: absolute;
+  bottom: 21px;
+  left: 21px;
+
+  width: 18px;
+  height: 18px;
+
+  fill: getColor("title-text");
+  transform: translate(-50%, 50%);
+  @include transition(fill);
+
+  .form-input:focus + &,
+  .form-input:hover + & {
+    fill: getColor("accent");
+  }
+}
+
+.form-textarea {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  resize: none;
+
+  border: 1px solid getColor("modal-input-border");
+  border-radius: 4px;
+  @include transition(border);
+
+  &:focus {
+    outline-color: getColor("accent");
+  }
+
+  &:hover {
+    border: 1px solid getColor("accent");
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: getColor("modal-input-placeholder");
+  }
+}
+
+.form-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-input_checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute; */
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  fill: getColor("primary-white");
+  border-radius: 2px;
+  border: 2px solid getColor("title-text");
+  @include transitionTwoProp(border, background-color);
+
+  .form-checkbox:hover & {
+    border: 2px solid getColor("accent");
+  }
+
+  .form-input_checkbox:checked + & {
+    border: 0px solid getColor("accent");
+    background: getColor("accent");
+  }
+}
+
+.form-text_checkbox {
+  display: inline;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.checkbox-text_link {
+  color: getColor("accent");
+}
+
+/* кнопка Х - закрити модальне вікно */
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  border-radius: 50%;
+  border: 1px solid getColor("modal-close-border");
+  background-color: getColor("primary-white");
+}
+
+.modal-close-x {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 11px;
+  height: 11px;
+
+  @include transition(fill);
+
+  .modal-close:hover &,
+  .modal-close:focus & {
+    fill: getColor("accent");
+  }
+}

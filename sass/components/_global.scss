@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+
+  color: getColor("primary-text");
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  background-color: getColor("primary-background");
+  //   color: $primary-text-color;
+  //   background-color: $primary-background-color;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ширина в макеті 1170пікс + по 15пікс по півгаттера справа та зліва, щоб текст не прилипав до краю */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .header > & {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  color: getColor("title-text");
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* SOCIAL ICONS*/
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  .footer & {
+    justify-content: start;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+}
+
+.social-item + .social-item {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: getColor("social-icon");
+  @include transitionTwoProp(fill, background-color);
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent");
+    fill: getColor("primary-white");
+  }
+}
+
+.footer .social-link {
+  background-color: getColor("social-link-background");
+  fill: getColor("primary-white");
+
+  &:hover,
+  &:focus {
+    background-color: getColor("accent");
+  }
+}
+
+.social-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  transform: translate(calc(50% + 2px), calc(50% + 2px));
+}

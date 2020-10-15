@@ -1,0 +1,38 @@
+@mixin transition(
+  $property,
+  $duration: 250ms,
+  $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timeFunc;
+}
+
+@mixin transitionTwoProp(
+  $property1,
+  $property2,
+  $duration: 250ms,
+  $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $property1, $property2;
+  transition-duration: $duration;
+  transition-timing-function: $timeFunc;
+}
+
+@mixin transitionThreeProp(
+  $property1,
+  $property2,
+  $property3,
+  $duration: 250ms,
+  $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $property1, $property2, $property3;
+  transition-duration: $duration;
+  transition-timing-function: $timeFunc;
+}
+
+@mixin itemWidth($row_item, $margin_width: 30px) {
+  /* $row_item - к-во блоков в один ряд в портфолио */
+  /* $margin_width - ширина марджина між item */
+  width: calc((100% - (#{$row_item} - 1) * #{$margin_width}) / #{$row_item});
+}

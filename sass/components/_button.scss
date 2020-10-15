@@ -1,0 +1,69 @@
+/* Button */
+.button {
+  display: inline-block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  color: getColor("title-text");
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: 0;
+  border-radius: 4px;
+  background-color: getColor("button-background");
+  @include transitionThreeProp(color, background-color, box-shadow);
+
+  &:hover,
+  &:focus {
+    color: getColor("primary-white");
+    background-color: getColor("accent");
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* BUTTON HERO  */
+.button--primary {
+  @extend .button;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  color: getColor("primary-white");
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  background-color: getColor("accent");
+}
+
+/* BUTTON in MODAL-FORM  */
+.modal-form .button--primary {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* BUTTON in FOOTER-FORM  */
+.footer-form .button--primary {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.button-icon {
+  display: block;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: getColor("primary-white");
+}
