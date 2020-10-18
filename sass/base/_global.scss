@@ -7,6 +7,10 @@ body {
   background-color: getColor("primary-background");
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
 }
@@ -27,19 +31,6 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
-}
-
-/* ширина в макеті 1170пікс + по 15пікс по півгаттера справа та зліва, щоб текст не прилипав до краю */
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  .header > & {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .visually-hidden {
@@ -64,11 +55,31 @@ h6 {
   text-decoration: none;
 }
 
+/* ширина в макеті 1170пікс + по 15пікс по півгаттера справа та зліва, щоб текст не прилипав до краю */
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+
+  .header > & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: getColor("title-text");
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }

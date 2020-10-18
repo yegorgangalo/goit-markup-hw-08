@@ -9,18 +9,15 @@
 
     color: getColor("primary-white");
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
   &-overlay {
-    /* height: 600px; */
-    /* margin-left: auto;
-  margin-right: auto; */
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     max-width: 1600px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
@@ -31,23 +28,67 @@
     background-size: cover;
     background-position: center;
   }
+
+  @media screen and (min-width: $desktop) {
+    &-overlay {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+
+    &-title {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
 }
 /*////////////////////////////////*/
 /*///// ADVANTEGES - section /////*/
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .advantages-list {
-  display: flex;
-
-  & .item {
-    @include itemWidth(4);
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    & .item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
-  & .item + .item {
-    margin-left: 30px;
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    & .item:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .item {
+      @include itemWidth(2);
+    }
+
+    & .item:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+
+    & .item {
+      @include itemWidth(4);
+    }
+
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   & .title {
@@ -58,6 +99,10 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width: calc(#{$tablet} - 1px)) {
+      text-align: center;
+    }
   }
 
   & .text {
@@ -81,6 +126,10 @@
 /*///// WORK - section /////*/
 .work {
   padding-bottom: 94px;
+
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    display: none;
+  }
 }
 
 .work-list {
@@ -116,17 +165,52 @@
 /*////////////////////////////////*/
 /*///// COMMAND - section /////*/
 .command {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: getColor("third-background");
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .command-list {
-  display: flex;
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    & .item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
-  & .item + .item {
-    margin-left: 30px;
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+    & .item:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .item {
+      @include itemWidth(2);
+    }
+
+    & .item:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+
+    & .item {
+      @include itemWidth(4);
+    }
+
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   & .item {
@@ -158,21 +242,46 @@
 
 .command-card-content {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 30px;
+  }
 }
 /*////////////////////////////////*/
 /*///// CLIENTS - section /////*/
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: -15px;
 
   & .item {
-    @include itemWidth(6);
+    @include itemWidthMargin(2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    & .item {
+      @include itemWidthMargin(3);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+
+    & .item {
+      @include itemWidthMargin(6);
+    }
   }
 }
 

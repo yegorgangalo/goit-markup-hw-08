@@ -6,9 +6,12 @@
   padding-right: 32px;
 
   .footer & {
-    justify-content: start;
     margin-top: 20px;
-    padding-left: 0;
+
+    @media screen and (min-width: $desktop) {
+      justify-content: start;
+      padding-left: 0;
+    }
   }
 }
 

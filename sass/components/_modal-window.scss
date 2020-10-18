@@ -7,6 +7,11 @@
   width: 100%;
   height: 100%;
   background-color: getColor("backdrop-background");
+  overflow-y: scroll;
+  padding-top: 93px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 93px;
 
   opacity: 1;
   transform: scale(1);
@@ -21,14 +26,10 @@
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 528px;
-  height: 581px;
+  position: relative;
+  max-width: 460px; /*не 450 бо не влазить стрічка з чекбоксом*/
   padding: 40px;
+  margin: 0 auto;
 
   border-radius: 4px;
   background-color: getColor("primary-white");
@@ -38,7 +39,19 @@
   & .section-title {
     margin-bottom: 12px;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 528px;
+
+    & .section-title {
+      line-height: 1.15;
+    }
   }
 }
 
@@ -168,8 +181,13 @@
 
 .form-text_checkbox {
   display: inline;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-text_link {

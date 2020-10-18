@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,30 +12,104 @@
   border-bottom: 1px solid getColor("header-border");
 }
 
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: getColor("accent");
+  }
+
+  & .icon-close {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu-button.is-open {
+  & .icon-close {
+    display: block;
+  }
+
+  & .icon-open {
+    display: none;
+  }
+}
+
+.menu-container {
+  background-color: getColor("primary-white");
+
+  &.is-open {
+    display: block;
+  }
+
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    display: none;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
 .main-nav {
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: $tablet) {
+    margin-left: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  flex-direction: column;
+  align-items: center;
 
-  & .item + .item {
-    margin-left: 50px;
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    margin-bottom: 60px;
+
+    & .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+
+    & .item + .item {
+      margin-left: 50px;
+    }
   }
 }
 
 .site-nav .link {
   position: relative;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
+  padding-bottom: 8px;
   color: getColor("title-text");
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.17;
   @include transition(color);
 
   &:hover,
@@ -52,25 +127,52 @@
     height: 4px;
     border-radius: 2px;
     background-color: getColor("accent");
-
     @include transition(opacity);
   }
 
   &.current {
     color: getColor("accent");
   }
-
   &.current::after {
     opacity: 1;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
 .site-contact {
   display: flex;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
 
-  & .item + .item {
-    margin-left: 50px;
+  & .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: auto;
+    align-items: flex-start;
+
+    & .item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+
+    & .item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    & .item + .item {
+      margin-left: 50px;
+    }
   }
 }
 
@@ -79,14 +181,19 @@
   align-items: center;
   color: inherit;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1.17;
 
   @include transition(color);
 
   &:hover,
   &:focus {
     color: getColor("accent");
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
