@@ -59,7 +59,6 @@ h6 {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 1200px;
 }
 
 .header > .container {
@@ -72,6 +71,24 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .section-title {
@@ -315,10 +332,6 @@ h6 {
   background-color: #ffffff;
 }
 
-.menu-container.is-open {
-  display: block;
-}
-
 @media screen and (max-width: calc(768px - 1px)) {
   .menu-container {
     display: none;
@@ -328,6 +341,9 @@ h6 {
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .menu-container.is-open {
+    display: block;
   }
 }
 
@@ -553,25 +569,108 @@ h6 {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
 .hero-overlay {
   padding-top: 118px;
   padding-bottom: 118px;
   max-width: 1600px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-img.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-480@1x.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-480@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 3), screen and (-webkit-min-device-pixel-ratio: 3), screen and (min-resolution: 288dpi), screen and (min-resolution: 3dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-480@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@3x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-768@1x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-768@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 3), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 480px) and (min-resolution: 288dpi), screen and (min-width: 480px) and (min-resolution: 3dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-768@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@3x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-1600@1x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-1600@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 288dpi), screen and (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero-overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg-1600@3x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@3x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .hero-overlay {
     padding-top: 200px;
     padding-bottom: 200px;
-  }
-  .hero-title {
-    font-size: 44px;
-    line-height: 1.36;
   }
 }
 
@@ -1191,8 +1290,7 @@ h6 {
   }
 }
 
-.footer-list,
-.half-list {
+.footer-list, .half-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1205,8 +1303,10 @@ h6 {
           align-items: center;
 }
 
-.footer-list .item {
+.footer-list .item, .half-list .item {
   text-align: center;
+  display: block;
+  width: 100%;
 }
 
 .half-list .item {
@@ -1219,27 +1319,19 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .half-list .item {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
-    width: calc((100% - (2 - 1) * 165px) / 2);
-  }
-  .half-list .item + .item {
-    margin-left: 165px;
+    width: calc((100% - (2 - 1) * 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .half-list {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-  .half-list .item + .item {
-    margin-left: 30px;
-  }
-  .footer-list {
+  .footer-list, .half-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1248,13 +1340,21 @@ h6 {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  .footer-list .item {
+  .footer-list .item, .half-list .item {
     text-align: left;
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
   }
-  .footer-list .item + .item {
+  .footer-list .item + .item, .half-list .item + .item {
+    margin-left: 30px;
+  }
+  .half-list {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .half-list .item + .item {
     margin-left: 30px;
   }
 }
@@ -1300,6 +1400,14 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: calc(1200px - 1px)) {
+  .footer-form {
+    max-width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1313,7 +1421,7 @@ h6 {
 
 .footer-input {
   margin-bottom: 20px;
-  width: 358px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -1331,12 +1439,6 @@ h6 {
 
 .footer-input:hover {
   border: 1px solid #2196f3;
-}
-
-@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
-  .footer-input {
-    width: 450px;
-  }
 }
 
 @media screen and (min-width: 1200px) {

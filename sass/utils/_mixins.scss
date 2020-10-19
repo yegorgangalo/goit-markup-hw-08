@@ -42,3 +42,14 @@
   /* $margin_width - ширина марджина між item */
   width: calc((100% - (#{$row_item} * 2) * #{$margin_width}) / #{$row_item});
 }
+
+@mixin heroBGImage($url) {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

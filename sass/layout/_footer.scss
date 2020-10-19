@@ -19,62 +19,63 @@
   }
 }
 
-.footer-list,
-.half-list {
+.footer-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & .item {
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
 }
 
-.footer-list .item {
-  text-align: center;
-}
+.half-list {
+  @extend .footer-list;
 
-.half-list .item {
-  margin-bottom: 60px;
+  & .item {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: $tablet) {
   .half-list {
     flex-direction: row;
-  }
+    justify-content: center;
 
-  .half-list .item {
-    @include itemWidth(2, 165px);
-  }
-
-  .half-list .item + .item {
-    margin-left: 165px;
+    & .item {
+      @include itemWidth(2);
+    }
   }
 }
 
 @media screen and (min-width: $desktop) {
-  .half-list {
-    align-items: baseline;
-  }
-
-  .half-list .item + .item {
-    margin-left: 30px;
-  }
-
   .footer-list {
     flex-direction: row;
     align-items: baseline;
+
+    & .item {
+      text-align: left;
+      @include itemWidth(2);
+    }
+
+    & .item + .item {
+      margin-left: 30px;
+    }
   }
 
-  .footer-list .item {
-    text-align: left;
-    @include itemWidth(2);
-  }
+  .half-list {
+    align-items: baseline;
 
-  .footer-list .item + .item {
-    margin-left: 30px;
+    & .item + .item {
+      margin-left: 30px;
+    }
   }
 }
 
 .address {
   margin-top: 20px;
-
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -101,6 +102,12 @@
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+    max-width: 450px;
+  }
 
   @media screen and (min-width: $desktop) {
     flex-direction: row;
@@ -109,7 +116,7 @@
 
 .footer-input {
   margin-bottom: 20px;
-  width: 358px;
+  width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -125,10 +132,6 @@
   }
   &:hover {
     border: 1px solid getColor("accent");
-  }
-
-  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
-    width: 450px;
   }
 
   @media screen and (min-width: $desktop) {

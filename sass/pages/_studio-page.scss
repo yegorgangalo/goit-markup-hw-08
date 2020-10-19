@@ -13,31 +13,63 @@
     line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 
   &-overlay {
     padding-top: 118px;
     padding-bottom: 118px;
     max-width: 1600px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+    @include heroBGImage("../images/hero-bg-480@1x.jpg");
 
-  @media screen and (min-width: $desktop) {
-    &-overlay {
-      padding-top: 200px;
-      padding-bottom: 200px;
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      @include heroBGImage("../images/hero-bg-480@2x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+      screen and (min-resolution: 288dpi),
+      screen and (min-resolution: 3dppx) {
+      @include heroBGImage("../images/hero-bg-480@3x.jpg");
     }
 
-    &-title {
-      font-size: 44px;
-      line-height: 1.36;
+    @media screen and (min-width: $mobile) {
+      @include heroBGImage("../images/hero-bg-768@1x.jpg");
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        @include heroBGImage("../images/hero-bg-768@2x.jpg");
+      }
+      @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+        @include heroBGImage("../images/hero-bg-768@3x.jpg");
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      @include heroBGImage("../images/hero-bg-1600@1x.jpg");
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        @include heroBGImage("../images/hero-bg-1600@2x.jpg");
+      }
+      @media screen and (min-device-pixel-ratio: 3),
+        screen and (min-resolution: 288dpi),
+        screen and (min-resolution: 3dppx) {
+        @include heroBGImage("../images/hero-bg-1600@3x.jpg");
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+      padding-bottom: 200px;
     }
   }
 }

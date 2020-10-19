@@ -49,10 +49,6 @@
 .menu-container {
   background-color: getColor("primary-white");
 
-  &.is-open {
-    display: block;
-  }
-
   @media screen and (max-width: calc(#{$tablet} - 1px)) {
     display: none;
     position: absolute;
@@ -61,6 +57,10 @@
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+
+    &.is-open {
+      display: block;
+    }
   }
 
   @media screen and (min-width: $tablet) {
