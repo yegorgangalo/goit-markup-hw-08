@@ -621,6 +621,12 @@ h6 {
   letter-spacing: 0.06em;
 }
 
+@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+  .examples-list .title {
+    font-size: 17px;
+  }
+}
+
 .examples-list .text {
   font-size: 16px;
   line-height: 1.87;
@@ -641,7 +647,7 @@ h6 {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
   .examples-list .item {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
