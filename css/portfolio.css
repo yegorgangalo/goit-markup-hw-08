@@ -281,7 +281,7 @@ h6 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   letter-spacing: 0.02em;
   background-color: #ffffff;
@@ -334,16 +334,32 @@ h6 {
 
 @media screen and (max-width: calc(768px - 1px)) {
   .menu-container {
-    display: none;
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: opacity, transform;
+    transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-container.is-open {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 

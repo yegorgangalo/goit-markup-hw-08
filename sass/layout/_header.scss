@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
 
   letter-spacing: 0.02em;
@@ -50,16 +50,22 @@
   background-color: getColor("primary-white");
 
   @media screen and (max-width: calc(#{$tablet} - 1px)) {
-    display: none;
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scaleY(0);
+    transform-origin: top;
+    @include transitionTwoProp(opacity, transform);
 
     &.is-open {
-      display: block;
+      opacity: 1;
+      pointer-events: auto;
+      transform: scaleY(1);
     }
   }
 
