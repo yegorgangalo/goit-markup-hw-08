@@ -336,6 +336,11 @@
   display: block;
   margin: 0 auto;
   transform: translateY(50%);
-
   fill: getColor("clients-section");
+  @include transition(fill);
+
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: getColor("accent");
+  }
 }
