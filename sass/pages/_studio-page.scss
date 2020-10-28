@@ -160,7 +160,7 @@
   padding-bottom: 94px;
 
   @media screen and (max-width: calc(#{$desktop} - 1px)) {
-    display: none;
+    @extend .visually-hidden;
   }
 }
 
