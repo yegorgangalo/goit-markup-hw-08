@@ -120,7 +120,7 @@
   font-size: 18px;
   line-height: 1.56;
 
-  background-color: getColor("text-overlay-background");
+  background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   @include transition(transform);
 
@@ -136,7 +136,7 @@
   padding-left: 24px;
   padding-right: 24px;
 
-  border-left: 1px solid getColor("card-border");
-  border-right: 1px solid getColor("card-border");
-  border-bottom: 1px solid getColor("card-border");
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }

@@ -4,7 +4,7 @@ body {
   color: #757575;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 }
 
 body.modal-open {
@@ -241,7 +241,15 @@ h6 {
 }
 
 .social-link {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -269,11 +277,8 @@ h6 {
 }
 
 .social-icon {
-  display: block;
   width: 20px;
   height: 20px;
-  -webkit-transform: translate(calc(50% + 2px), calc(50% + 2px));
-          transform: translate(calc(50% + 2px), calc(50% + 2px));
 }
 
 .header {
@@ -909,7 +914,7 @@ h6 {
 }
 
 .footer-input:focus {
-  outline-color: #2196f3;
+  outline: 1px solid #2196f3;
 }
 
 .footer-input:hover {

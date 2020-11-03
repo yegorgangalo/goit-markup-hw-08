@@ -20,11 +20,14 @@
 }
 
 .social-link {
-  display: inline-block;
+  // display: inline-block;
+  display: flex;
+  justify-content: center; //+
+  align-items: center; //+
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: getColor("social-icon");
+  fill: #afb1b8;
   @include transitionTwoProp(fill, background-color);
 
   &:hover,
@@ -35,7 +38,7 @@
 }
 
 .footer .social-link {
-  background-color: getColor("social-link-background");
+  background-color: rgba(255, 255, 255, 0.1);
   fill: getColor("primary-white");
 
   &:hover,
@@ -45,8 +48,8 @@
 }
 
 .social-icon {
-  display: block;
+  // display: block;
   width: 20px;
   height: 20px;
-  transform: translate(calc(50% + 2px), calc(50% + 2px));
+  // transform: translate(calc(50% + 2px), calc(50% + 2px));
 }

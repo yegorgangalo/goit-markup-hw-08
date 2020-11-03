@@ -16,7 +16,7 @@
 
   border: 0;
   border-radius: 4px;
-  background-color: getColor("button-background");
+  background-color: getColor("third-background");
   @include transitionThreeProp(color, background-color, box-shadow);
 
   &:hover,

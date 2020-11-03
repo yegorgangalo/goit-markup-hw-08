@@ -4,7 +4,7 @@ body {
   color: getColor("primary-text");
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  background-color: getColor("primary-background");
+  background-color: getColor("primary-white");
 }
 
 body.modal-open {
