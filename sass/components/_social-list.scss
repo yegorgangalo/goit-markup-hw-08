@@ -2,28 +2,24 @@
 .social-list {
   display: flex;
   justify-content: center;
-  padding-left: 32px;
-  padding-right: 32px;
 
   .footer & {
     margin-top: 20px;
 
     @media screen and (min-width: $desktop) {
       justify-content: start;
-      padding-left: 0;
     }
   }
 }
 
-.social-item + .social-item {
-  margin-left: 10px;
+.social-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-link {
-  // display: inline-block;
   display: flex;
-  justify-content: center; //+
-  align-items: center; //+
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -48,8 +44,6 @@
 }
 
 .social-icon {
-  // display: block;
   width: 20px;
   height: 20px;
-  // transform: translate(calc(50% + 2px), calc(50% + 2px));
 }

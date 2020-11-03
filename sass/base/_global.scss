@@ -61,10 +61,15 @@ h6 {
   padding-left: 15px;
   padding-right: 15px;
 
-  .header > & {
+  .header & {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .hero & {
+    text-align: center;
+    width: 400px;
   }
 
   @media screen and (min-width: $mobile) {
@@ -75,6 +80,10 @@ h6 {
   }
   @media screen and (min-width: $desktop) {
     width: 1200px;
+
+    .hero & {
+      width: 700px;
+    }
   }
 }
 

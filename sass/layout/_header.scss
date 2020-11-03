@@ -102,8 +102,8 @@
   @media screen and (min-width: $tablet) {
     flex-direction: row;
 
-    & .item + .item {
-      margin-left: 50px;
+    & .item:not(:last-child) {
+      margin-right: 50px;
     }
   }
 }
@@ -174,10 +174,7 @@
 
     & .item:not(:last-child) {
       margin-bottom: 0;
-    }
-
-    & .item + .item {
-      margin-left: 50px;
+      margin-right: 50px;
     }
   }
 }

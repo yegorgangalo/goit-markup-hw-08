@@ -1,7 +1,9 @@
 /*///// HERO - section /////*/
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  text-align: center;
   background-color: getColor("secondary-background");
 
   &-title {
@@ -21,8 +23,7 @@
   }
 
   &-overlay {
-    padding-top: 118px;
-    padding-bottom: 118px;
+    height: 400px;
     max-width: 1600px;
     @include heroBGImage("../images/hero-bg-480@1x.jpg");
 
@@ -68,8 +69,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-      padding-top: 200px;
-      padding-bottom: 200px;
+      height: 600px;
     }
   }
 }
@@ -174,8 +174,8 @@
 .work-list {
   display: flex;
 
-  & .item + .item {
-    margin-left: 30px;
+  & .item:not(:last-child) {
+    margin-right: 30px;
   }
 
   & .item {
@@ -253,7 +253,7 @@
   }
 
   & .item {
-    text-align: center;
+    // text-align: center; //або це юзати або в command-card-content все по флексу
 
     background-color: getColor("primary-white");
     border-bottom-left-radius: 4px;
@@ -279,6 +279,10 @@
 }
 
 .command-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 30px;
   padding-bottom: 24px;
 
@@ -298,27 +302,67 @@
   }
 }
 
+// .clients-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin: -15px;
+
+//   & .item {
+//     @include itemWidthMargin(2);
+//     margin: 15px;
+//   }
+
+//   @media screen and (min-width: $tablet) {
+//     & .item {
+//       @include itemWidthMargin(3);
+//     }
+//   }
+
+//   @media screen and (min-width: $desktop) {
+//     flex-wrap: nowrap;
+
+//     & .item {
+//       @include itemWidthMargin(6);
+//     }
+//   }
+// }
+
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
 
-  & .item {
-    @include itemWidthMargin(2);
-    margin: 15px;
+  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    & .item {
+      @include itemWidth(2);
+    }
+    & .item:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & .item:nth-last-child(n + 3) {
+      margin-bottom: 30px;
+    }
   }
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
     & .item {
-      @include itemWidthMargin(3);
+      @include itemWidth(3);
+    }
+    & .item:not(:nth-child(3n)) {
+      margin-right: 30px;
+    }
+    & .item:nth-last-child(n + 4) {
+      margin-bottom: 30px;
     }
   }
 
   @media screen and (min-width: $desktop) {
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; //обов'язково вказувати nowrap чи можна не міняти?
 
     & .item {
-      @include itemWidthMargin(6);
+      @include itemWidth(6);
+    }
+    & .item:not(:last-child) {
+      margin-right: 30px;
     }
   }
 }

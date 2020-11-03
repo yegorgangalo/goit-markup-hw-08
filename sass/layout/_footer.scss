@@ -19,6 +19,7 @@
   }
 }
 
+/*----------------------------------*/
 .footer-list {
   display: flex;
   flex-direction: column;
@@ -26,53 +27,57 @@
 
   & .item {
     text-align: center;
-    display: block;
-    width: 100%;
+    width: 100%; //flex-basis:100% інпут не стає на всю ширину
   }
-}
 
-.half-list {
-  @extend .footer-list;
-
-  & .item {
+  & .item:not(:last-child) {
     margin-bottom: 60px;
   }
 }
 
 @media screen and (min-width: $tablet) {
-  .half-list {
+  .footer-list {
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-start;
 
-    & .item {
-      @include itemWidth(2);
+    @media (max-width: calc(#{$desktop} - 1px)) {
+      & .item:first-child {
+        margin-right: 30px;
+      }
+
+      & .item:not(:last-child) {
+        @include itemWidth(2);
+      }
     }
   }
 }
 
 @media screen and (min-width: $desktop) {
   .footer-list {
-    flex-direction: row;
-    align-items: baseline;
+    flex-wrap: nowrap;
 
     & .item {
       text-align: left;
-      @include itemWidth(2);
     }
 
-    & .item + .item {
-      margin-left: 30px;
+    & .item:not(:last-child) {
+      flex-basis: 25%;
+      flex-grow: 1;
+      margin-right: 30px;
+      // @include itemWidth(4);
     }
-  }
 
-  .half-list {
-    align-items: baseline;
-
-    & .item + .item {
-      margin-left: 30px;
+    & .item:last-child {
+      flex-basis: 50%;
+      flex-grow: 2;
+      // @include itemWidth(2);
     }
   }
 }
+
+/*----------------------------------*/
 
 .address {
   margin-top: 20px;
