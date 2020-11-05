@@ -180,6 +180,7 @@
 
   & .item {
     position: relative;
+    @include itemWidth(3);
   }
 
   & .title {

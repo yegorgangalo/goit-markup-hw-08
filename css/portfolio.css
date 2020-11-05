@@ -137,6 +137,8 @@ h6 {
   transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -162,6 +164,23 @@ h6 {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background-color: #2196f3;
+  -webkit-transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, box-shadow;
+  transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button--primary:hover, .button--primary:focus {
+  color: #212121;
+  background-color: #f5f4fa;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* BUTTON in MODAL-FORM  */
@@ -188,7 +207,7 @@ h6 {
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  fill: #ffffff;
+  fill: currentColor;
 }
 
 .logo {
@@ -204,6 +223,8 @@ h6 {
   color: #212121;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -261,6 +282,8 @@ h6 {
   fill: #afb1b8;
   -webkit-transition-property: fill, background-color;
   transition-property: fill, background-color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -310,6 +333,8 @@ h6 {
   outline: none;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -360,6 +385,8 @@ h6 {
     transition-property: opacity, -webkit-transform;
     transition-property: opacity, transform;
     transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
     -webkit-transition-duration: 250ms;
             transition-duration: 250ms;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -443,6 +470,8 @@ h6 {
   line-height: 1.17;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -465,6 +494,8 @@ h6 {
   background-color: #2196f3;
   -webkit-transition-property: opacity;
   transition-property: opacity;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -543,6 +574,8 @@ h6 {
   line-height: 1.17;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -565,6 +598,8 @@ h6 {
   fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -666,6 +701,8 @@ h6 {
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
   transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -734,6 +771,8 @@ h6 {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -776,13 +815,6 @@ h6 {
 
 /*----------------------------------*/
 .footer-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -798,6 +830,9 @@ h6 {
 
 @media screen and (min-width: 768px) {
   .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -821,6 +856,10 @@ h6 {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
+  }
+  .footer-list .item:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -859,6 +898,8 @@ h6 {
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

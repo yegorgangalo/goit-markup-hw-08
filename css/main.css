@@ -137,6 +137,8 @@ h6 {
   transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -162,6 +164,23 @@ h6 {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background-color: #2196f3;
+  -webkit-transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, -webkit-box-shadow;
+  transition-property: color, background-color, box-shadow;
+  transition-property: color, background-color, box-shadow, -webkit-box-shadow;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button--primary:hover, .button--primary:focus {
+  color: #212121;
+  background-color: #f5f4fa;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* BUTTON in MODAL-FORM  */
@@ -188,7 +207,7 @@ h6 {
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  fill: #ffffff;
+  fill: currentColor;
 }
 
 .logo {
@@ -204,6 +223,8 @@ h6 {
   color: #212121;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -261,6 +282,8 @@ h6 {
   fill: #afb1b8;
   -webkit-transition-property: fill, background-color;
   transition-property: fill, background-color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -310,6 +333,8 @@ h6 {
   outline: none;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -360,6 +385,8 @@ h6 {
     transition-property: opacity, -webkit-transform;
     transition-property: opacity, transform;
     transition-property: opacity, transform, -webkit-transform;
+    -webkit-transition-delay: 0;
+            transition-delay: 0;
     -webkit-transition-duration: 250ms;
             transition-duration: 250ms;
     -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -443,6 +470,8 @@ h6 {
   line-height: 1.17;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -465,6 +494,8 @@ h6 {
   background-color: #2196f3;
   -webkit-transition-property: opacity;
   transition-property: opacity;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -543,6 +574,8 @@ h6 {
   line-height: 1.17;
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -565,6 +598,8 @@ h6 {
   fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -827,6 +862,9 @@ h6 {
 
 .work-list .item {
   position: relative;
+  /* $row_item - к-во блоков в один ряд в портфолио */
+  /* $margin_width - ширина марджина між item */
+  width: calc((100% - (3 - 1) * 30px) / 3);
 }
 
 .work-list .title {
@@ -1025,6 +1063,8 @@ h6 {
   border: 1px solid currentColor;
   -webkit-transition-property: border-color;
   transition-property: border-color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1043,6 +1083,8 @@ h6 {
   fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1057,6 +1099,15 @@ h6 {
 /* модальне вікно */
 .backdrop {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 901;
   top: 0;
   left: 0;
@@ -1069,12 +1120,10 @@ h6 {
   padding-right: 15px;
   padding-bottom: 93px;
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1084,6 +1133,9 @@ h6 {
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
+}
+
+.backdrop.is-hidden .modal {
   -webkit-transform: scale(0);
           transform: scale(0);
 }
@@ -1098,6 +1150,18 @@ h6 {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal .section-title {
@@ -1108,12 +1172,17 @@ h6 {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     max-width: 528px;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-delay: 250ms;
+            transition-delay: 250ms;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .modal .section-title {
     line-height: 1.15;
@@ -1152,6 +1221,8 @@ h6 {
   border-radius: 4px;
   -webkit-transition-property: border;
   transition-property: border;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1177,6 +1248,8 @@ h6 {
           transform: translate(-50%, 50%);
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1199,6 +1272,8 @@ h6 {
   border-radius: 4px;
   -webkit-transition-property: border;
   transition-property: border;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1279,6 +1354,8 @@ h6 {
   border: 2px solid #212121;
   -webkit-transition-property: border, background-color;
   transition-property: border, background-color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1338,6 +1415,8 @@ h6 {
   height: 12px;
   -webkit-transition-property: fill;
   transition-property: fill;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1367,13 +1446,6 @@ h6 {
 
 /*----------------------------------*/
 .footer-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1389,6 +1461,9 @@ h6 {
 
 @media screen and (min-width: 768px) {
   .footer-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1412,6 +1487,10 @@ h6 {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
+  }
+  .footer-list .item:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
@@ -1450,6 +1529,8 @@ h6 {
   color: rgba(255, 255, 255, 0.6);
   -webkit-transition-property: color;
   transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

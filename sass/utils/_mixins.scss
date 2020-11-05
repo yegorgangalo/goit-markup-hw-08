@@ -1,9 +1,11 @@
 @mixin transition(
   $property,
+  $delay: 0,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
   transition-property: $property;
+  transition-delay: $delay;
   transition-duration: $duration;
   transition-timing-function: $timeFunc;
 }
@@ -11,10 +13,12 @@
 @mixin transitionTwoProp(
   $property1,
   $property2,
+  $delay: 0,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
   transition-property: $property1, $property2;
+  transition-delay: $delay;
   transition-duration: $duration;
   transition-timing-function: $timeFunc;
 }
@@ -23,10 +27,12 @@
   $property1,
   $property2,
   $property3,
+  $delay: 0,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
   transition-property: $property1, $property2, $property3;
+  transition-delay: $delay;
   transition-duration: $duration;
   transition-timing-function: $timeFunc;
 }
