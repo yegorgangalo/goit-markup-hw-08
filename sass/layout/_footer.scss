@@ -27,7 +27,6 @@
 
   & .item {
     text-align: center;
-    width: 100%; //flex-basis:100% інпут не стає на всю ширину
   }
 
   & .item:not(:last-child) {
@@ -63,16 +62,16 @@
     }
 
     & .item:not(:last-child) {
-      flex-basis: 25%;
-      flex-grow: 1;
+      // flex-basis: 25%;
+      // flex-grow: 1;
       margin-right: 30px;
-      // @include itemWidth(4);
+      @include itemWidth(4);
     }
 
     & .item:last-child {
-      flex-basis: 50%;
-      flex-grow: 2;
-      // @include itemWidth(2);
+      // flex-basis: 50%;
+      // flex-grow: 2;
+      @include itemWidth(2);
     }
   }
 }

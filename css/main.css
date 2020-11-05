@@ -562,7 +562,7 @@ h6 {
 
 .contact-icon {
   margin-right: 10px;
-  fill: #757575;
+  fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
   -webkit-transition-duration: 250ms;
@@ -573,7 +573,7 @@ h6 {
 
 .site-contact .link:hover .contact-icon,
 .site-contact .link:focus .contact-icon {
-  fill: #2196f3;
+  fill: currentColor;
 }
 
 /*///// HERO - section /////*/
@@ -1020,8 +1020,9 @@ h6 {
 .clients-link {
   display: block;
   height: 90px;
+  color: #afb1b8;
   border-radius: 4px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   -webkit-transition-property: border-color;
   transition-property: border-color;
   -webkit-transition-duration: 250ms;
@@ -1031,7 +1032,7 @@ h6 {
 }
 
 .clients-link:hover, .clients-link:focus {
-  border-color: #2196f3;
+  color: #2196f3;
 }
 
 .clients-icon {
@@ -1039,7 +1040,7 @@ h6 {
   margin: 0 auto;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  fill: #afb1b8;
+  fill: currentColor;
   -webkit-transition-property: fill;
   transition-property: fill;
   -webkit-transition-duration: 250ms;
@@ -1050,7 +1051,7 @@ h6 {
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-  fill: #2196f3;
+  fill: currentColor;
 }
 
 /* модальне вікно */
@@ -1386,7 +1387,6 @@ h6 {
 
 .footer-list .item {
   text-align: center;
-  width: 100%;
 }
 
 .footer-list .item:not(:last-child) {
@@ -1430,19 +1430,15 @@ h6 {
     text-align: left;
   }
   .footer-list .item:not(:last-child) {
-    -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
     margin-right: 30px;
+    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $margin_width - ширина марджина між item */
+    width: calc((100% - (4 - 1) * 30px) / 4);
   }
   .footer-list .item:last-child {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    -webkit-box-flex: 2;
-        -ms-flex-positive: 2;
-            flex-grow: 2;
+    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $margin_width - ширина марджина між item */
+    width: calc((100% - (2 - 1) * 30px) / 2);
   }
 }
 

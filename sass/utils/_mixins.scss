@@ -37,11 +37,11 @@
   width: calc((100% - (#{$row_item} - 1) * #{$margin_width}) / #{$row_item});
 }
 
-@mixin itemWidthMargin($row_item, $margin_width: 15px) {
-  /* $row_item - к-во блоков в один ряд в портфолио */
-  /* $margin_width - ширина марджина між item */
-  width: calc((100% - (#{$row_item} * 2) * #{$margin_width}) / #{$row_item});
-}
+// @mixin itemWidthMargin($row_item, $margin_width: 15px) {
+//   /* $row_item - к-во блоков в один ряд в портфолио */
+//   /* $margin_width - ширина марджина між item */
+//   width: calc((100% - (#{$row_item} * 2) * #{$margin_width}) / #{$row_item});
+// }
 
 @mixin heroBGImage($url) {
   background-image: linear-gradient(

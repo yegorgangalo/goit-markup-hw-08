@@ -10,19 +10,3 @@ $colors: (
 @function getColor($key) {
   @return map-get($colors, $key);
 }
-
-// "button-background": #f5f4fa,
-// "social-link-background": rgba(255, 255, 255, 0.1),
-// "backdrop-background": rgba(0, 0, 0, 0.2),
-// "text-overlay-background": rgba(33, 150, 243, 0.9),
-// "clients-section": #afb1b8,
-// "social-icon": #afb1b8,
-// "footer-input-border": rgba(255, 255, 255, 0.3),
-// "card-border": #eeeeee,
-// "work-title-background": rgba(47, 48, 58, 0.8),
-// "primary-background": #ffffff,
-// "header-border": #ececec,
-// "modal-close-border": rgba(0, 0, 0, 0.1),
-// "modal-input-border": rgba(33, 33, 33, 0.2),
-// "modal-input-placeholder": rgba(117, 117, 117, 0.5),
-// "address-link-text": rgba(255, 255, 255, 0.6),

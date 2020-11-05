@@ -371,14 +371,15 @@
   display: block;
   height: 90px;
 
+  color: #afb1b8;
   border-radius: 4px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
 
   @include transition(border-color);
 
   &:hover,
   &:focus {
-    border-color: getColor("accent");
+    color: getColor("accent");
   }
 }
 
@@ -386,11 +387,11 @@
   display: block;
   margin: 0 auto;
   transform: translateY(50%);
-  fill: #afb1b8;
+  fill: currentColor;
   @include transition(fill);
 
   .clients-link:hover &,
   .clients-link:focus & {
-    fill: getColor("accent");
+    fill: currentColor;
   }
 }
