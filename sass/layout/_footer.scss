@@ -12,10 +12,6 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-
-    @media screen and (min-width: $tablet) {
-      padding-top: 12px;
-    }
   }
 }
 
@@ -39,7 +35,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: baseline;
 
     @media (max-width: calc(#{$desktop} - 1px)) {
       & .item:first-child {
