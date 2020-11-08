@@ -217,6 +217,18 @@ h6 {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover, .logo:focus {
+  color: #212121;
 }
 
 .logo-studio {
@@ -231,12 +243,20 @@ h6 {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-studio.inverse {
+.logo:hover .logo-studio,
+.logo:focus .logo-studio {
+  color: #2196f3;
+}
+
+.logo.inverse .logo-studio {
   color: #ffffff;
 }
 
-.logo:hover > .logo-studio,
-.logo:focus > .logo-studio {
+.logo.inverse:hover, .logo.inverse:focus {
+  color: #ffffff;
+}
+
+.logo.inverse:hover .logo-studio, .logo.inverse:focus .logo-studio {
   color: #2196f3;
 }
 

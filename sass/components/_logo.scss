@@ -5,18 +5,35 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: getColor("title-text");
+  }
 }
 
 .logo-studio {
   color: getColor("title-text");
   @include transition(color);
 
-  &.inverse {
+  .logo:hover &,
+  .logo:focus & {
+    color: getColor("accent");
+  }
+}
+
+.logo.inverse {
+  .logo-studio {
     color: getColor("primary-white");
   }
 
-  .logo:hover > &,
-  .logo:focus > & {
-    color: getColor("accent");
+  &:hover,
+  &:focus {
+    color: getColor("primary-white");
+
+    .logo-studio {
+      color: getColor("accent");
+    }
   }
 }

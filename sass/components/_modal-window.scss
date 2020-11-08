@@ -1,9 +1,6 @@
 /* модальне вікно */
 .backdrop {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 901;
   top: 0;
   left: 0;
@@ -18,6 +15,12 @@
 
   opacity: 1;
   @include transition(opacity);
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .backdrop.is-hidden {
