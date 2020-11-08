@@ -650,7 +650,7 @@ h6 {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -659,7 +659,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -669,7 +669,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-480@3x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -679,7 +679,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -689,7 +689,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -699,7 +699,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-768@3x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -709,7 +709,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -719,7 +719,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -729,7 +729,7 @@ h6 {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-1600@3x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
 }
 
@@ -1133,6 +1133,14 @@ h6 {
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -1455,8 +1463,10 @@ h6 {
   text-align: center;
 }
 
-.footer-list .item:not(:last-child) {
-  margin-bottom: 60px;
+@media (max-width: calc(1200px - 1px)) {
+  .footer-list .item:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1523,7 +1533,7 @@ h6 {
   line-height: 1.71;
 }
 
-.address .link {
+.address .link:not(:first-child) {
   display: block;
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.6);
@@ -1537,14 +1547,15 @@ h6 {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address .link:hover, .address .link:focus {
-  color: #2196f3;
-}
-
 @media screen and (min-width: 1200px) {
-  .address .link {
+  .address .link:not(:first-child) {
     margin-top: 9px;
   }
+}
+
+.address .link:hover,
+.address .link:focus {
+  color: #2196f3;
 }
 
 .footer-form {
@@ -1590,10 +1601,6 @@ h6 {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-}
-
-.footer-input:focus {
-  outline: 1px solid #2196f3;
 }
 
 .footer-input:hover {

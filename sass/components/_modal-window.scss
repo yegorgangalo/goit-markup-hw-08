@@ -23,6 +23,7 @@
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
+  @include transition(opacity, 250ms);
 
   .modal {
     transform: scale(0);

@@ -25,8 +25,10 @@
     text-align: center;
   }
 
-  & .item:not(:last-child) {
-    margin-bottom: 60px;
+  @media (max-width: calc(#{$desktop} - 1px)) {
+    & .item:not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -83,21 +85,21 @@
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-}
 
-.address .link {
-  display: block;
-  margin-top: 8px;
-  color: rgba(255, 255, 255, 0.6);
-  @include transition(color);
+  & .link:not(:first-child) {
+    display: block;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    @include transition(color);
 
-  &:hover,
-  &:focus {
-    color: getColor("accent");
+    @media screen and (min-width: $desktop) {
+      margin-top: 9px;
+    }
   }
 
-  @media screen and (min-width: $desktop) {
-    margin-top: 9px;
+  & .link:hover,
+  & .link:focus {
+    color: getColor("accent");
   }
 }
 
@@ -131,9 +133,6 @@
   border-radius: 4px;
   background-color: inherit;
 
-  &:focus {
-    outline: 1px solid getColor("accent");
-  }
   &:hover {
     border: 1px solid getColor("accent");
   }

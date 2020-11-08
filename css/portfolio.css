@@ -673,6 +673,11 @@ h6 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: -30px;
+    margin-top: -30px;
   }
 }
 
@@ -686,7 +691,7 @@ h6 {
 }
 
 @media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
-  .examples-list .title {
+  .examples-list {
     font-size: 17px;
   }
 }
@@ -709,21 +714,19 @@ h6 {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.examples-list .item:not(last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: calc(768px - 1px)) {
+  .examples-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+@media screen and (min-width: 768px) {
   .examples-list .item {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
-    width: calc((100% - (2 - 1) * 30px) / 2);
-  }
-  .examples-list .item:not(:nth-child(2n)) {
-    margin-right: 30px;
-  }
-  .examples-list .item:nth-last-child(n + 3) {
-    margin-bottom: 30px;
+    width: calc((100% - (2 * 2) * 15px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
   }
 }
 
@@ -731,13 +734,7 @@ h6 {
   .examples-list .item {
     /* $row_item - к-во блоков в один ряд в портфолио */
     /* $margin_width - ширина марджина між item */
-    width: calc((100% - (3 - 1) * 30px) / 3);
-  }
-  .examples-list .item:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
-  .examples-list .item:nth-last-child(n + 4) {
-    margin-bottom: 30px;
+    width: calc((100% - (3 * 2) * 15px) / 3);
   }
 }
 
@@ -824,8 +821,10 @@ h6 {
   text-align: center;
 }
 
-.footer-list .item:not(:last-child) {
-  margin-bottom: 60px;
+@media (max-width: calc(1200px - 1px)) {
+  .footer-list .item:not(:last-child) {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -892,7 +891,7 @@ h6 {
   line-height: 1.71;
 }
 
-.address .link {
+.address .link:not(:first-child) {
   display: block;
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.6);
@@ -906,14 +905,15 @@ h6 {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address .link:hover, .address .link:focus {
-  color: #2196f3;
-}
-
 @media screen and (min-width: 1200px) {
-  .address .link {
+  .address .link:not(:first-child) {
     margin-top: 9px;
   }
+}
+
+.address .link:hover,
+.address .link:focus {
+  color: #2196f3;
 }
 
 .footer-form {
@@ -959,10 +959,6 @@ h6 {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-}
-
-.footer-input:focus {
-  outline: 1px solid #2196f3;
 }
 
 .footer-input:hover {
