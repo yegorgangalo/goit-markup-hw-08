@@ -1,6 +1,6 @@
 @mixin transition(
   $property,
-  $delay: 0,
+  $delay: 0ms,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
@@ -13,7 +13,7 @@
 @mixin transitionTwoProp(
   $property1,
   $property2,
-  $delay: 0,
+  $delay: 0ms,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
@@ -27,7 +27,7 @@
   $property1,
   $property2,
   $property3,
-  $delay: 0,
+  $delay: 0ms,
   $duration: 250ms,
   $timeFunc: cubic-bezier(0.4, 0, 0.2, 1)
 ) {
