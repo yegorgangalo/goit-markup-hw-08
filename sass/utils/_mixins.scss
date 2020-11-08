@@ -60,7 +60,7 @@
   background-position: top;
 }
 
-@mixin visuallyHiden() {
+@mixin visuallyHidden() {
   position: absolute;
   width: 1px;
   height: 1px;

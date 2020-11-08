@@ -866,7 +866,8 @@ h6 {
     border: 0;
     padding: 0;
     clip: rect(0 0 0 0);
-    overflow: en;
+    overflow: hidden;
+    margin: -1px;
   }
 }
 
@@ -1355,7 +1356,7 @@ h6 {
   border: 2px solid #2196f3;
 }
 
-.form-checkbox input[type="checkbox"]:checked + .checkbox-icon {
+.form-checkbox__input:checked + .checkbox-icon {
   border: 0px solid #2196f3;
   background: #2196f3;
 }
