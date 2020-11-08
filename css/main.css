@@ -1379,7 +1379,7 @@ h6 {
 }
 
 /* кнопка Х - закрити модальне вікно */
-.modal-close {
+.modal__close-btn {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1400,7 +1400,7 @@ h6 {
   background-color: #ffffff;
 }
 
-.modal-close-x {
+.modal__close-x {
   width: 12px;
   height: 12px;
   -webkit-transition-property: fill;
@@ -1413,8 +1413,8 @@ h6 {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover .modal-close-x,
-.modal-close:focus .modal-close-x {
+.modal__close-btn:hover .modal__close-x,
+.modal__close-btn:focus .modal__close-x {
   fill: #2196f3;
 }
 
