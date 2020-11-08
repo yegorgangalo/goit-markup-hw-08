@@ -166,7 +166,7 @@
     border: 2px solid getColor("accent");
   }
 
-  .form-checkbox input[type="checkbox"]:checked + & {
+  .form-checkbox__input:checked + & {
     border: 0px solid getColor("accent");
     background: getColor("accent");
   }
@@ -206,10 +206,6 @@
 }
 
 .modal-close-x {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
 
