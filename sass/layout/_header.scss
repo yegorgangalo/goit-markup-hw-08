@@ -202,13 +202,11 @@
 
 .contact-icon {
   margin-right: 10px;
-  // fill: getColor("primary-text");
   fill: currentColor;
   @include transition(fill);
 
   .site-contact .link:hover &,
   .site-contact .link:focus & {
-    // fill: getColor("accent");
     fill: currentColor;
   }
 }
