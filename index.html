@@ -685,9 +685,10 @@
         </button>
 
         <form class="modal-form" autocomplete="on">
+
           <label class="form-field">
             <span class="form-text">Имя</span>
-            <input class="form-input" type="text" name="name" />
+            <input class="form-input" type="text" name="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required/>
             <svg class="form-icon">
               <use href="./images/sprite.svg#modal-form-1-name" />
             </svg>
@@ -695,7 +696,7 @@
 
           <label class="form-field">
             <span class="form-text">Телефон</span>
-            <input class="form-input" type="tel" name="tel" />
+            <input class="form-input" type="tel" name="tel" pattern="^380[0-9]{9}(\s*)?$" required/>
             <svg class="form-icon">
               <use href="./images/sprite.svg#modal-form-2-phone" />
             </svg>
@@ -703,7 +704,7 @@
 
           <label class="form-field">
             <span class="form-text">Почта</span>
-            <input class="form-input" type="email" name="email" />
+            <input class="form-input" type="email" name="email" pattern="^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$" required/>
             <svg class="form-icon">
               <use href="./images/sprite.svg#modal-form-3-email" />
             </svg>

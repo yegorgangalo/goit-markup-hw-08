@@ -11,6 +11,10 @@ body.modal-open {
   overflow: hidden;
 }
 
+* {
+  outline-color: #2196f3;
+}
+
 a {
   color: inherit;
 }
@@ -34,14 +38,16 @@ h6 {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
   overflow: hidden;
+  margin: -1px;
 }
 
 .list {
@@ -868,13 +874,14 @@ h6 {
 
 @media screen and (max-width: calc(1200px - 1px)) {
   .work {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
     overflow: hidden;
     margin: -1px;
   }
