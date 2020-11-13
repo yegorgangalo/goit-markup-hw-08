@@ -16,7 +16,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    @media screen and (min-width: $desktop) {
+    @include media-size(min-desktop) {
       font-size: 44px;
       line-height: 1.36;
     }
@@ -38,7 +38,7 @@
       @include heroBGImage("../images/hero-bg-480@3x.jpg");
     }
 
-    @media screen and (min-width: $mobile) {
+    @include media-size(min-mobile) {
       @include heroBGImage("../images/hero-bg-768@1x.jpg");
 
       @media screen and (min-device-pixel-ratio: 2),
@@ -53,7 +53,7 @@
       }
     }
 
-    @media screen and (min-width: $tablet) {
+    @include media-size(min-tablet) {
       @include heroBGImage("../images/hero-bg-1600@1x.jpg");
 
       @media screen and (min-device-pixel-ratio: 2),
@@ -68,7 +68,7 @@
       }
     }
 
-    @media screen and (min-width: $desktop) {
+    @include media-size(min-desktop) {
       height: 600px;
     }
   }
@@ -79,26 +79,26 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
 .advantages-list {
-  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+  @include media-size(tablet-1) {
     & .item:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: $tablet) and (max-width: calc(#{$desktop} - 1px)) {
+  @include media-size(min-tablet-desktop-1) {
     & .item:nth-child(-n + 2) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     display: flex;
     flex-wrap: wrap;
 
@@ -111,7 +111,7 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     flex-wrap: nowrap;
 
     & .item {
@@ -132,7 +132,7 @@
     line-height: 1.14;
     text-transform: uppercase;
 
-    @media screen and (max-width: calc(#{$tablet} - 1px)) {
+    @include media-size(tablet-1) {
       text-align: center;
     }
   }
@@ -163,7 +163,7 @@
 .work {
   padding-bottom: 94px;
 
-  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+  @include media-size(desktop-1) {
     @include visuallyHidden();
   }
 }
@@ -206,20 +206,20 @@
   padding-bottom: 60px;
   background-color: getColor("third-background");
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
 }
 
 .command-list {
-  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+  @include media-size(tablet-1) {
     & .item:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     display: flex;
     flex-wrap: wrap;
     margin-top: -30px;
@@ -232,7 +232,7 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     & .item {
       @include itemWidthMargin(4);
     }
@@ -270,7 +270,7 @@
   padding-top: 30px;
   padding-bottom: 24px;
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     padding-bottom: 30px;
   }
 }
@@ -280,7 +280,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -297,11 +297,11 @@
     margin-left: 30px;
     @include itemWidthMargin(2);
 
-    @media screen and (min-width: $tablet) {
+    @include media-size(min-tablet) {
       @include itemWidthMargin(3);
     }
 
-    @media screen and (min-width: $desktop) {
+    @include media-size(min-desktop) {
       @include itemWidthMargin(6);
     }
   }

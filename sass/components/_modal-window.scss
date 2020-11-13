@@ -16,7 +16,7 @@
   opacity: 1;
   @include transition(opacity);
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +53,7 @@
     line-height: 1.5;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     max-width: 528px;
     @include transition(transform, 250ms);
 
@@ -177,7 +177,7 @@
   font-size: 12px;
   line-height: 1.17;
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     font-size: 14px;
     line-height: 1.71;
   }

@@ -6,7 +6,7 @@
   .footer & {
     margin-top: 20px;
 
-    @media screen and (min-width: $desktop) {
+    @include media-size(min-desktop) {
       justify-content: start;
     }
   }

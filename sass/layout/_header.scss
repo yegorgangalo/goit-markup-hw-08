@@ -31,7 +31,7 @@
     display: none;
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     display: none;
   }
 }
@@ -49,7 +49,7 @@
 .menu-container {
   background-color: getColor("primary-white");
 
-  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+  @include media-size(tablet-1) {
     position: absolute;
     top: calc(100% + 1px);
     left: 0;
@@ -69,7 +69,7 @@
     }
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     display: flex;
     align-items: center;
     flex-grow: 1;
@@ -77,11 +77,11 @@
 }
 
 .main-nav {
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     margin-left: 88px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     margin-left: 93px;
   }
 }
@@ -91,7 +91,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: calc(#{$tablet} - 1px)) {
+  @include media-size(tablet-1) {
     margin-bottom: 60px;
 
     & .item:not(:last-child) {
@@ -99,7 +99,7 @@
     }
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     flex-direction: row;
 
     & .item:not(:last-child) {
@@ -143,7 +143,7 @@
     opacity: 1;
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: 14px;
@@ -160,7 +160,7 @@
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     margin-left: auto;
     align-items: flex-start;
 
@@ -169,7 +169,7 @@
     }
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     flex-direction: row;
 
     & .item:not(:last-child) {
@@ -194,7 +194,7 @@
     color: getColor("accent");
   }
 
-  @media screen and (min-width: $tablet) {
+  @include media-size(min-tablet) {
     font-size: 14px;
     line-height: 1.14;
   }

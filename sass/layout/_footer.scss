@@ -25,14 +25,14 @@
     text-align: center;
   }
 
-  @media (max-width: calc(#{$desktop} - 1px)) {
+  @include media-size(desktop-1) {
     & .item:not(:last-child) {
       margin-bottom: 60px;
     }
   }
 }
 
-@media screen and (min-width: $tablet) {
+@include media-size(min-tablet) {
   .footer-list {
     display: flex;
     flex-direction: row;
@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: baseline;
 
-    @media (max-width: calc(#{$desktop} - 1px)) {
+    @include media-size(desktop-1) {
       & .item:first-child {
         margin-right: 30px;
       }
@@ -55,7 +55,7 @@
   }
 }
 
-@media screen and (min-width: $desktop) {
+@include media-size(min-desktop) {
   .footer-list {
     flex-wrap: nowrap;
 
@@ -92,7 +92,7 @@
     color: rgba(255, 255, 255, 0.6);
     @include transition(color);
 
-    @media screen and (min-width: $desktop) {
+    @include media-size(min-desktop) {
       margin-top: 9px;
     }
   }
@@ -111,11 +111,11 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (max-width: calc(#{$desktop} - 1px)) {
+  @include media-size(desktop-1) {
     max-width: 450px;
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     flex-direction: row;
   }
 }
@@ -137,7 +137,7 @@
     border: 1px solid getColor("accent");
   }
 
-  @media screen and (min-width: $desktop) {
+  @include media-size(min-desktop) {
     margin-right: 12px;
     margin-bottom: 0;
   }

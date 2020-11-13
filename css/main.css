@@ -393,7 +393,7 @@ h6 {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: calc(768px - 1px)) {
+@media screen and (max-width: 767px) {
   .menu-container {
     position: absolute;
     top: calc(100% + 1px);
@@ -465,7 +465,7 @@ h6 {
           align-items: center;
 }
 
-@media screen and (max-width: calc(768px - 1px)) {
+@media screen and (max-width: 767px) {
   .site-nav {
     margin-bottom: 60px;
   }
@@ -779,13 +779,13 @@ h6 {
   }
 }
 
-@media screen and (max-width: calc(768px - 1px)) {
+@media screen and (max-width: 767px) {
   .advantages-list .item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantages-list .item:nth-child(-n + 2) {
     margin-bottom: 30px;
   }
@@ -800,7 +800,7 @@ h6 {
         flex-wrap: wrap;
   }
   .advantages-list .item {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
   }
@@ -815,7 +815,7 @@ h6 {
         flex-wrap: nowrap;
   }
   .advantages-list .item {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (4 - 1) * 30px) / 4);
   }
@@ -833,7 +833,7 @@ h6 {
   text-transform: uppercase;
 }
 
-@media screen and (max-width: calc(768px - 1px)) {
+@media screen and (max-width: 767px) {
   .advantages-list .title {
     text-align: center;
   }
@@ -872,7 +872,7 @@ h6 {
   padding-bottom: 94px;
 }
 
-@media screen and (max-width: calc(1200px - 1px)) {
+@media screen and (max-width: 1199px) {
   .work {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -899,7 +899,7 @@ h6 {
 
 .work-list .item {
   position: relative;
-  /* $row_item - к-во блоков в один ряд в портфолио */
+  /* $row_item - к-ть блоків в один ряд */
   /* $margin_width - ширина марджина між item */
   width: calc((100% - (3 - 1) * 30px) / 3);
 }
@@ -935,7 +935,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: calc(768px - 1px)) {
+@media screen and (max-width: 767px) {
   .command-list .item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -954,7 +954,7 @@ h6 {
   .command-list .item {
     margin-top: 30px;
     margin-left: 30px;
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 * 2) * 15px) / 2);
   }
@@ -962,7 +962,7 @@ h6 {
 
 @media screen and (min-width: 1200px) {
   .command-list .item {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (4 * 2) * 15px) / 4);
   }
@@ -1042,14 +1042,14 @@ h6 {
 .clients-list .item {
   margin-top: 30px;
   margin-left: 30px;
-  /* $row_item - к-во блоков в один ряд в портфолио */
+  /* $row_item - к-ть блоків в один ряд */
   /* $margin_width - ширина марджина між item */
   width: calc((100% - (2 * 2) * 15px) / 2);
 }
 
 @media screen and (min-width: 768px) {
   .clients-list .item {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (3 * 2) * 15px) / 3);
   }
@@ -1057,7 +1057,7 @@ h6 {
 
 @media screen and (min-width: 1200px) {
   .clients-list .item {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (6 * 2) * 15px) / 6);
   }
@@ -1461,7 +1461,7 @@ h6 {
   text-align: center;
 }
 
-@media (max-width: calc(1200px - 1px)) {
+@media screen and (max-width: 1199px) {
   .footer-list .item:not(:last-child) {
     margin-bottom: 60px;
   }
@@ -1487,12 +1487,12 @@ h6 {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: calc(1200px - 1px)) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-list .item:first-child {
     margin-right: 30px;
   }
   .footer-list .item:not(:last-child) {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
   }
@@ -1512,12 +1512,12 @@ h6 {
   }
   .footer-list .item:not(:last-child) {
     margin-right: 30px;
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (4 - 1) * 30px) / 4);
   }
   .footer-list .item:last-child {
-    /* $row_item - к-во блоков в один ряд в портфолио */
+    /* $row_item - к-ть блоків в один ряд */
     /* $margin_width - ширина марджина між item */
     width: calc((100% - (2 - 1) * 30px) / 2);
   }
@@ -1572,7 +1572,7 @@ h6 {
   margin-right: auto;
 }
 
-@media screen and (max-width: calc(1200px - 1px)) {
+@media screen and (max-width: 1199px) {
   .footer-form {
     max-width: 450px;
   }
