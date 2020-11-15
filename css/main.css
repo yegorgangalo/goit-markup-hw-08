@@ -1377,7 +1377,7 @@ h6 {
   border: 2px solid #2196f3;
 }
 
-.form-checkbox__input:checked + .checkbox-icon {
+.checkbox-icon.checked {
   border: 0px solid #2196f3;
   background: #2196f3;
 }

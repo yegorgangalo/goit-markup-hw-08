@@ -171,7 +171,12 @@
     border: 2px solid getColor("accent");
   }
 
-  .form-checkbox__input:checked + & {
+  // .form-checkbox__input:checked + & {
+  //   border: 0px solid getColor("accent");
+  //   background: getColor("accent");
+  // }
+
+  &.checked {
     border: 0px solid getColor("accent");
     background: getColor("accent");
   }
