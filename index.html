@@ -688,26 +688,33 @@
 
           <label class="form-field">
             <span class="form-text">Имя</span>
-            <input class="form-input" type="text" name="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required/>
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#modal-form-1-name" />
-            </svg>
+            <span class="form__input-wrapper">
+              <input class="form-input" type="text" name="name" pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required />
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#modal-form-1-name" />
+              </svg>
+            </span>
           </label>
 
           <label class="form-field">
             <span class="form-text">Телефон</span>
-            <input class="form-input" type="tel" name="tel" pattern="^380[0-9]{9}(\s*)?$" required/>
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#modal-form-2-phone" />
-            </svg>
+            <span class="form__input-wrapper">
+              <input class="form-input" type="tel" name="tel" pattern="^380[0-9]{9}(\s*)?$" required />
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#modal-form-2-phone" />
+              </svg>
+            </span>
           </label>
 
           <label class="form-field">
             <span class="form-text">Почта</span>
-            <input class="form-input" type="email" name="email" pattern="^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$" required/>
-            <svg class="form-icon">
-              <use href="./images/sprite.svg#modal-form-3-email" />
-            </svg>
+            <span class="form__input-wrapper">
+              <input class="form-input" type="email" name="email" pattern="^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$"
+                required />
+              <svg class="form-icon">
+                <use href="./images/sprite.svg#modal-form-3-email" />
+              </svg>
+            </span>
           </label>
 
           <label class="form-field">
@@ -729,9 +736,7 @@
             <svg class="checkbox-icon">
               <use href="./images/sprite.svg#modal-checkbox-icon" />
             </svg>
-            <span class="form-text_checkbox">
-              Соглашаюсь с рассылкой и принимаю
-              <a class="checkbox-text_link" href="">Условия договора</a>
+            <span class="form__text-checkbox">Соглашаюсь с рассылкой и принимаю <a class="checkbox__text-link" href="">Условия договора</a>
             </span>
           </label>
 
