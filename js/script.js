@@ -1,12 +1,12 @@
 (() => {
 
 /* ---------HEADER-hight------------ */
-  const { height: pageHeaderHeight } = document
+  const { height: blockHeaderHeight } = document
         .querySelector(".header")
         .getBoundingClientRect();
-  document.body.style.paddingTop = `${pageHeaderHeight}px`;
+  document.body.style.paddingTop = `${blockHeaderHeight}px`;
 
-  //MENU
+  /* --------mobile MENU------------- */
   const menuBtnRef = document.querySelector("[data-menu-button]");
   const mobileMenuRef = document.querySelector("[data-menu]");
 
@@ -63,7 +63,7 @@
     modalRef.style.outline = 'none';
   }
 
-/* CHECKBOX-icon in modal add CHECKED */
+/* CHECKBOX-icon in modal add attribute CHECKED */
   const checkboxIconRef = document.querySelector('[data-checkbox-icon]');
   const checkboxInputRef = document.querySelector('[data-checkbox-input]');
   const checkboxLabelRef = document.querySelector('[data-checkbox-label]');
@@ -80,7 +80,6 @@
       if ( event.target.classList.contains('checkbox-icon') && event.code === 'Enter') {
         checkboxInputRef.setAttribute('checked', '');
         checkboxIconRef.classList.add('checked');
-        console.log(`checked added. onPressEnterRemove added`);
         window.removeEventListener('keydown', onPressEnterAdd);
         window.addEventListener('keydown', onPressEnterRemove);
       }
@@ -90,7 +89,6 @@
     if (event.target.classList.contains('checkbox-icon') && event.code === 'Enter') {
       checkboxInputRef.removeAttribute('checked');
       checkboxIconRef.classList.remove('checked');
-      console.log(`checked removed. added onPressEnterAdd`);
       window.removeEventListener('keydown', onPressEnterRemove);
       addEventListenerAddChecked();
     }
