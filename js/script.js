@@ -66,9 +66,11 @@
 /* CHECKBOX-icon in modal add CHECKED */
   const checkboxIconRef = document.querySelector('[data-checkbox-icon]');
   const checkboxInputRef = document.querySelector('[data-checkbox-input]');
+  const checkboxLabelRef = document.querySelector('[data-checkbox-label]');
 
-  checkboxIconRef.addEventListener('click', byClickChecked);
-  checkboxIconRef.addEventListener('focus', addEventListenerAddChecked);
+
+  checkboxLabelRef.addEventListener('click', byClickChecked);
+  checkboxIconRef.addEventListener('focus', addEventListenerAddChecked());
 
   function addEventListenerAddChecked() {
     window.addEventListener('keydown', onPressEnterAdd);
@@ -94,16 +96,19 @@
     }
   };
 
-  function byClickChecked() {
-    if (checkboxInputRef.hasAttribute('checked')) {
-      checkboxInputRef.removeAttribute('checked');
-      checkboxIconRef.classList.remove('checked');
-      addEventListenerAddChecked();
-    } else {
-      checkboxInputRef.setAttribute('checked', '');
-      checkboxIconRef.classList.add('checked');
-      window.addEventListener('keydown', onPressEnterRemove);
-    }
+  function byClickChecked(event) {
+    if (event.target.classList.contains('form__text-checkbox') ||
+        event.target.classList.contains('checkbox-icon')) {
+          if (checkboxInputRef.hasAttribute('checked')) {
+          checkboxInputRef.removeAttribute('checked');
+          checkboxIconRef.classList.remove('checked');
+          addEventListenerAddChecked();
+          } else {
+          checkboxInputRef.setAttribute('checked', '');
+          checkboxIconRef.classList.add('checked');
+          window.addEventListener('keydown', onPressEnterRemove);
+          };
+    };
   };
 
 /* ========================================= */
